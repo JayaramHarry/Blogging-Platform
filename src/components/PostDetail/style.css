@@ -1,0 +1,12 @@
+.full-blog-page{
+    padding: 40px;
+}
+
+.full-blog-page > h2{
+    font-size: 40px;
+    color: rgb(223, 115, 140);
+    /* text-decoration: underline; */
+}
+.full-blog-page > button{
+    color: #000;
+}

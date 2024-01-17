@@ -1,0 +1,121 @@
+
+.create-bolg-bg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url("/public/home-banner.png");
+    background-size: cover;
+    
+    min-height: 30vh;
+
+}
+.create-blog-heading{
+    font-size: 50px;
+    color: #fff;
+    font-family: "roboto";
+}
+.blog-description{
+    color: blueviolet;
+}
+.blog-unordered-list{
+    list-style-type: none;
+    
+}
+/* .blog-unordered-list :hover{
+    transform: scale(1.1);
+} */
+.blog-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow:0px 4px 6px 0px;
+    cursor: pointer;
+    border: 1px solid #cfd8dc;
+    /* width: 100%; */
+}
+.blog-logo-content{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 90%;
+}
+.title-first-latter{
+    background-color: #e4e4e4;
+    align-self: center;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    padding: 20px 35px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.blog-title{
+    font-size: 30px;
+    /* flex-wrap: nowrap; */
+    text-decoration: none;
+    font-weight: bold;
+}
+.blog-date {
+    font-size: 14px;
+    color: #cc4848;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+.delete-edit-options{
+    display: flex;
+    width: 5%;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    .blog-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .blog-logo-content {
+      width: 100%;
+      /* justify-content: center; */
+      margin-bottom: 15px;
+    }
+  
+    .title-first-latter {
+      margin-right: 14px;
+    }
+  
+    .delete-edit-options {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+
+  /* Tablet styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .blog-card {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .blog-logo-content {
+      width: 80%;
+    }
+  }
+  
+  /* Larger screen styles (desktop) */
+  /* @media only screen and (min-width: 1025px) {
+    .blog-card {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .blog-logo-content {
+      width: 35%;
+    }
+  } */

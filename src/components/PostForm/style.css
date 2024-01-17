@@ -1,0 +1,16 @@
+.create-post-form{
+    /* padding: 40px; */
+    margin: 40px;
+}
+.title-input{
+    border: none;
+    border-bottom: 2px solid #f8c521;
+    margin: 5px 0px 5px 0px;
+    width: 100%;
+    outline: none;
+    font-family: fantasy;
+}
+textarea{
+    outline: none;
+    font-family: inherit;
+}
