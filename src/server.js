@@ -1,18 +1,26 @@
 const express = require('express');
-const app = express();
 
 const cors = require('cors');
+const postsRouter = require('./server/posts');
 
+const app = express();
 const PORT = 3001;
 
  // Enable CORS for all routes
 app.use(cors());
 
-const postsRouter = require('./server/posts');
+
 app.use('/posts', postsRouter);
 
 app.use(express.json());
 
+
+const errorHandler = (err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Internal Server Error' });
+};
+
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
