@@ -21,7 +21,7 @@ const PostForm = ({ postId, onSubmit, onCancel, initialValues }) => {
     
         try {
           if (postId) {
-            const response = await fetch(`http://localhost:3001/posts/${postId}`, {
+            const response = await fetch(`https://blogging-platform-hm.netlify.app/posts/${postId}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const PostForm = ({ postId, onSubmit, onCancel, initialValues }) => {
               throw new Error('Failed to update post');
             }
           } else {
-            const response = await fetch('http://localhost:3001/posts', {
+            const response = await fetch('https://blogging-platform-hm.netlify.app/posts', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
