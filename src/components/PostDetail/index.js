@@ -11,7 +11,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/posts/${postId}`);
+        const response = await fetch(`http://blogging-platform-hm.glitch.me/posts/${postId}`);
         const data = await response.json();
         setPost(data);
       } catch (error) {

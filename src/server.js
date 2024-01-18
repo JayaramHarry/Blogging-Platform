@@ -22,6 +22,6 @@ const errorHandler = (err, req, res, next) => {
 
 app.use(errorHandler);
 
-app.listen(PORT, '0.0.0.0',() => {
-  console.log(`Server is running on port ${PORT}`);
+const listener = app.listen(process.env.PORT || 3000, () => {
+  console.log('Your app is listening on port ' + listener.address().port);
 });
