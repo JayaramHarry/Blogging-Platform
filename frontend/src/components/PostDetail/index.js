@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import apiUrl from '../../apiConfig';
 import "./style.css"
 
 // Full blog view
@@ -11,7 +12,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/posts/${postId}`);
+        const response = await fetch(`${apiUrl}/posts/${postId}`);
         const data = await response.json();
         setPost(data);
       } catch (error) {

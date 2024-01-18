@@ -1,11 +1,21 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "proxy": "https://blogging-platform-w991.onrender.com",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react-script": "^2.0.5",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.33.2",
+    "http-proxy-middleware": "^2.0.6"
+  }
 }

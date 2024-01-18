@@ -4,7 +4,7 @@
   "description": "create a blogs",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "nodemon server.js",
     "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

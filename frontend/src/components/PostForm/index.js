@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import apiUrl from '../../apiConfig.js';
 import "./style.css"
 
 const PostForm = ({ postId, onSubmit, onCancel, initialValues }) => {
@@ -21,7 +22,7 @@ const PostForm = ({ postId, onSubmit, onCancel, initialValues }) => {
     
         try {
           if (postId) {
-            const response = await fetch(`http://localhost:3001/posts/${postId}`, {
+            const response = await fetch(`${apiUrl}/posts/${postId}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +34,7 @@ const PostForm = ({ postId, onSubmit, onCancel, initialValues }) => {
               throw new Error('Failed to update post');
             }
           } else {
-            const response = await fetch('http://localhost:3001/posts', {
+            const response = await fetch(`${apiUrl}/posts`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

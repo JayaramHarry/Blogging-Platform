@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 import { BsFillTrashFill } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
+import apiUrl from '../../apiConfig';
 
 import NoResultsFound from '../NoResultsFound';
 import PostForm from '../PostForm';
@@ -18,7 +19,7 @@ const Home = ({searchTerm}) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/posts');
+        const response = await fetch(`${apiUrl}/posts`);
         const data = await response.json();
         setPosts(data);
       } catch (error) {
@@ -40,7 +41,7 @@ const Home = ({searchTerm}) => {
   // Remove the deleted post from the state
   const handleDelete = async (postId) => {
     try {
-      await fetch(`http://localhost:3001/posts/${postId}`, {
+      await fetch(`${apiUrl}/posts/${postId}`, {
         method: 'DELETE',
       });
 
@@ -65,7 +66,7 @@ const Home = ({searchTerm}) => {
   const handleUpdate = async (postId, updatedPost) => {
       
     try {
-      const response = await fetch(`http://localhost:3001/posts/${postId}`, {
+      const response = await fetch(`${apiUrl}/posts/${postId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
