@@ -18,7 +18,7 @@ const Home = ({searchTerm}) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('https://blogging-platform-hm.netlify.app/posts');
+        const response = await fetch('https://blogging-platform-hm.netlify.app/server/posts');
         const data = await response.json();
         setPosts(data);
       } catch (error) {
@@ -40,7 +40,7 @@ const Home = ({searchTerm}) => {
   // Remove the deleted post from the state
   const handleDelete = async (postId) => {
     try {
-      await fetch(`https://blogging-platform-hm.netlify.app/posts/${postId}`, {
+      await fetch(`https://blogging-platform-hm.netlify.app/server/posts/${postId}`, {
         method: 'DELETE',
       });
 
@@ -65,7 +65,7 @@ const Home = ({searchTerm}) => {
   const handleUpdate = async (postId, updatedPost) => {
       
     try {
-      const response = await fetch(`https://blogging-platform-hm.netlify.app/posts/${postId}`, {
+      const response = await fetch(`https://blogging-platform-hm.netlify.app/server/posts/${postId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

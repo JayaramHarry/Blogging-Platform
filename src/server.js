@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const postsRouter = require('./server/posts');
+const postsRouter = require('server/posts');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
