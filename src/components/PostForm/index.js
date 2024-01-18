@@ -21,7 +21,7 @@ const PostForm = ({ postId, onSubmit, onCancel, initialValues }) => {
     
         try {
           if (postId) {
-            const response = await fetch(`http://blogging-platform-hm.glitch.me/posts/${postId}`, {
+            const response = await fetch(`http://localhost:3001/posts/${postId}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const PostForm = ({ postId, onSubmit, onCancel, initialValues }) => {
               throw new Error('Failed to update post');
             }
           } else {
-            const response = await fetch('http://blogging-platform-hm.glitch.me/posts', {
+            const response = await fetch('http://localhost:3001/posts', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
