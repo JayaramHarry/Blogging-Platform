@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 
 
-app.use('/server/posts', postsRouter);
+app.use('/posts', postsRouter);
 
 app.use(express.json());
 
