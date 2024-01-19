@@ -1,8 +1,0 @@
-"redirects": [
-    {
-      "from": "/api/*",
-      "to": "https://blogging-platform-w991.onrender.com/:splat",
-      "status": 200,
-      "force": true
-    }
-  ]
