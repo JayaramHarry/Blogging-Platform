@@ -1,5 +1,5 @@
 module.exports = {
-    // extends: ['react-app'],
+    extends: ['react-app'],
     rules: {
       // Your additional rules for frontend code
     },

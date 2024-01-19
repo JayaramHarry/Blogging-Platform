@@ -20,6 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-frontend": "cd frontend && npm start",
+    "start-root": "npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

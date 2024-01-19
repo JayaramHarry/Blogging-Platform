@@ -1,3 +1,4 @@
+
 const express = require('express');
 const cors = require('cors');
 const postsRouter = require('./server/posts');
@@ -7,13 +8,16 @@ const PORT = process.env.PORT || 3001;
 
 // Enable CORS with specific options
 const corsOptions = {
-  origin: 'https://blogging-platform-hm.netlify.app', // Replace with your actual front-end domain during development
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
 };
 
-
+app.use((req, res, next) => {
+  console.log('Request Origin:', req.get('origin'));
+  next();
+});
 // Enable CORS for all routes
 app.use(cors(corsOptions));
 
