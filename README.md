@@ -1,3 +1,6 @@
+*To run this project:-
+node server.js To start the server
+npm start  to run the website
 
 Assignment Title: "Simple Blogging Platform"
 
